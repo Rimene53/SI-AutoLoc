@@ -1,9 +1,13 @@
 package tn.esprit.autoloc.service;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.autoloc.entities.Contrat;
 import tn.esprit.autoloc.repositories.ContratRepositorie;
 
 import java.util.List;
+@Service
+@AllArgsConstructor
 
 public class ContratService implements IContratService {
     ContratRepositorie contratRepo;
@@ -18,8 +22,8 @@ public class ContratService implements IContratService {
     }
 
     @Override
-    public void deleteContrat(Contrat c) {
-        contratRepo.delete(c);
+    public void deleteContrat(Long id) {
+        contratRepo.deleteById(id);
 
     }
 

@@ -1,10 +1,12 @@
 package tn.esprit.autoloc.service;
 
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.autoloc.entities.Agence;
 import tn.esprit.autoloc.repositories.AgenceRepositorie;
 
 import java.util.List;
+@Service
 @AllArgsConstructor
 public class AgenceService implements IAgenceService {
     AgenceRepositorie agencerepo;
@@ -14,8 +16,8 @@ public class AgenceService implements IAgenceService {
     }
 
     @Override
-    public void deleteagence(Agence ag) {
-        agencerepo.delete(ag);
+    public void deleteagence(Long id) {
+        agencerepo.deleteById(id);
 
     }
 

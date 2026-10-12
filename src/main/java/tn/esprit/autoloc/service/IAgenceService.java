@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IAgenceService {
     Agence addagence(Agence ag);
-    void deleteagence(Agence ag);
+    void deleteagence(Long id);
     List<Agence> afficheagence();
     Agence updateagence(Agence ag);
 

@@ -11,7 +11,7 @@ public class EquipementService implements IEquipementService {
     }
 
     @Override
-    public void deleteEquipement(Equipement e) {
+    public void deleteEquipement(Long id) {
 
     }
 

@@ -1,12 +1,13 @@
 package tn.esprit.autoloc.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.autoloc.entities.Client;
 import tn.esprit.autoloc.repositories.ClientRepositorie;
 
 import java.util.List;
 @Service
-
+@AllArgsConstructor
 public class ClientService implements IClientService{
     ClientRepositorie clientrepo;
 
@@ -21,8 +22,8 @@ public class ClientService implements IClientService{
     }
 
     @Override
-    public void deleteClient(Client client) {
-        clientrepo.delete(client);
+    public void deleteClient(Long id) {
+        clientrepo.deleteById(id);
     }
 
     @Override

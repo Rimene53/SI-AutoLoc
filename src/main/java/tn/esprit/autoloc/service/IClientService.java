@@ -7,6 +7,6 @@ import java.util.List;
 public interface IClientService {
     Client addClient(Client client);
     Client updateClient(Client client);
-    void deleteClient(Client client);
+    void deleteClient(Long id);
     List<Client> afficheClient();
 }
